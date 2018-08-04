@@ -2,4 +2,4 @@ apiVersion: v1
 description: A Helm chart for knative build
 name: knative-build
 version: 0.0.1-SNAPSHOT
-icon: https://rawgit.com/knative/docs/blob/1acad47/images/logo/rgb/knative-logo-rgb.png
+icon: https://raw.githubusercontent.com/knative/docs/1acad47/images/logo/rgb/knative-logo-rgb.png
