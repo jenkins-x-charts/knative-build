@@ -7,10 +7,6 @@ Expand the name of the chart.
 {{- default "knative-build" .Values.build.nameOverride | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
 
-{{- define "build.webhook.name" -}}
-{{- default "build-webhook" .Values.build.webhook.nameOverride | trunc 63 | trimSuffix "-" -}}
-{{- end -}}
-
 {{- define "build.controller.name" -}}
 {{- default "build-controller" .Values.build.controller.nameOverride | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
