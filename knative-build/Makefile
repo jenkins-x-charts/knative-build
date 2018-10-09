@@ -1,7 +1,7 @@
 CHART_REPO := http://jenkins-x-chartmuseum:8080
-NAME := knative-build
+NAME := knative
 OS := $(shell uname)
-VERSION := $(shell cat ../VERSION)
+VERSION := $(shell cat ./VERSION)
 
 build: clean
 	helm dependency build
