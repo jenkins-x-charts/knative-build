@@ -28,4 +28,4 @@ build:
       externalPort: 9090
       internalPort: 9090
 jenkins:
-  tag: 0.1.8
+  tag: 0.1.9
