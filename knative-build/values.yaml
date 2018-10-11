@@ -27,4 +27,3 @@ build:
       type: ClusterIP
       externalPort: 9090
       internalPort: 9090
-jenkinsTag: 0.1.9
