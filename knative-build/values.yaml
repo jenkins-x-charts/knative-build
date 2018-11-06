@@ -27,6 +27,12 @@ build:
       type: ClusterIP
       externalPort: 9090
       internalPort: 9090
+  auth:
+    git:
+      username:
+      password:
+      # username: my-bot
+      # password: my-bot-token
 image:
   creds: gcr.io/knative-releases/github.com/knative/build/cmd/creds-init@sha256:c1c11fafd337f62eea18a1f02b78e6ae6949779bed72d53d19b2870723a8f104
   git: gcr.io/knative-releases/github.com/knative/build/cmd/git-init@sha256:6fa8043ed114920cd61e28db3c942647ba48415fe1208acde2fb2ac0746c9164
