@@ -2,20 +2,20 @@ build:
   controller:
     replicaCount: 1
     image:
-      repository: gcr.io/build-crd/github.com/knative/build/cmd/controller@sha256
-      tag: 9220968c9aae7e6edac97effc7b693fcf5bbb17edf78aa14347de87b15ac8840
+      repository: gcr.io/knative-releases/github.com/knative/build/cmd/controller@sha256
+      tag: 2667d0ff68a406e0103c58145edef916edc1b41695b38964dc6ccb0b38c0aedf
     imagePullPolicy: IfNotPresent
     terminationGracePeriodSeconds: 30
     args:
-    - -builder
-    - cluster
     - -logtostderr
     - -stderrthreshold
     - INFO
     - -creds-image
-    - gcr.io/build-crd/github.com/knative/build/cmd/creds-init@sha256:cfcc14889abe29b54d17ff6cf414918d9d92ff02bb112525742ec2e30117899f
+    - gcr.io/knative-releases/github.com/knative/build/cmd/creds-init@sha256:c1c11fafd337f62eea18a1f02b78e6ae6949779bed72d53d19b2870723a8f104
     - -git-image
-    - gcr.io/build-crd/github.com/knative/build/cmd/git-init@sha256:d52c29a4a1d83712b048bd32dbb5f97b7d2791af9b892f68fe94e162932ac66e
+    - gcr.io/knative-releases/github.com/knative/build/cmd/git-init@sha256:6fa8043ed114920cd61e28db3c942647ba48415fe1208acde2fb2ac0746c9164
+    - -nop-image
+    - gcr.io/knative-releases/github.com/knative/build/cmd/nop@sha256:f94e6413749759bc3f80d33e76c36509d6a63f7b206d2ca8fff167a0bb9c77f2
     resources:
       limits:
       cpu: 200m
@@ -27,3 +27,14 @@ build:
       type: ClusterIP
       externalPort: 9090
       internalPort: 9090
+  auth:
+    git:
+      username:
+      password:
+      # username: my-bot
+      # password: my-bot-token
+image:
+  creds: gcr.io/knative-releases/github.com/knative/build/cmd/creds-init@sha256:c1c11fafd337f62eea18a1f02b78e6ae6949779bed72d53d19b2870723a8f104
+  git: gcr.io/knative-releases/github.com/knative/build/cmd/git-init@sha256:6fa8043ed114920cd61e28db3c942647ba48415fe1208acde2fb2ac0746c9164
+  gcs: gcr.io/cloud-builders/gcs-fetcher
+  nop: gcr.io/knative-releases/github.com/knative/build/cmd/nop@sha256:f94e6413749759bc3f80d33e76c36509d6a63f7b206d2ca8fff167a0bb9c77f2
