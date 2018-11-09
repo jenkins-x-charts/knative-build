@@ -1,11 +1,8 @@
-kind: ConfigMap
 apiVersion: v1
-metadata:
-  name: config-logging
 data:
+  loglevel.autoscaler: info
   loglevel.controller: info
-  loglevel.creds-init: info
-  loglevel.git-init: info
+  loglevel.queueproxy: info
   loglevel.webhook: info
   zap-logger-config: |
     {
@@ -32,3 +29,6 @@ data:
         "callerEncoder": ""
       }
     }
+kind: ConfigMap
+metadata:
+  name: config-logging

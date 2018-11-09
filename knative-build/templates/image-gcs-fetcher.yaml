@@ -1,6 +1,0 @@
-apiVersion: caching.internal.knative.dev/v1alpha1
-kind: Image
-metadata:
-  name: gcs-fetcher
-spec:
-  image: {{ .Values.image.gcs }}
