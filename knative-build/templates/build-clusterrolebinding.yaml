@@ -1,11 +1,11 @@
 apiVersion: rbac.authorization.k8s.io/v1beta1
 kind: ClusterRoleBinding
 metadata:
-  name: {{ template "build.controller.name" . }}-admin
+  name: {{ template "build.fullname" . }}-admin
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: {{ template "build.name" . }}-admin
+  name: {{ template "build.fullname" . }}-admin
 subjects:
 - kind: ServiceAccount
   name: {{ template "build.controller.name" . }}
