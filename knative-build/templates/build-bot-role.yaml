@@ -27,6 +27,14 @@ rules:
   - create
   - update
 - apiGroups:
+  - jenkins.io
+  resources:
+  - plugins
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
   - ""
   resources:
   - namespaces
