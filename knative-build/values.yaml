@@ -33,3 +33,4 @@ build:
       password:
       # username: my-bot
       # password: my-bot-token
+tillerNamespace: kube-system

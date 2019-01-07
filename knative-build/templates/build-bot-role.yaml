@@ -35,6 +35,22 @@ rules:
   - list
   - watch
 - apiGroups:
+  - jenkins.io
+  resources:
+  - users
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - jenkins.io
+  resources:
+  - releases
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
   - ""
   resources:
   - namespaces
