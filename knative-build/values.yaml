@@ -2,7 +2,9 @@ build:
   controller:
     replicaCount: 1
     image:
-      repository: gcr.io/knative-releases/github.com/knative/build/cmd/controller@sha256
+      # use custom image until upstream PR merged https://github.com/knative/build/pull/519
+      #repository: gcr.io/knative-releases/github.com/knative/build/cmd/controller@sha256
+      repository: rawlingsj/build-controller:upstream3
       tag: 9502ac4288ac2cd0f42352913ddf15aebc8319239e1118f08fae217d5b5536ee
     imagePullPolicy: IfNotPresent
     terminationGracePeriodSeconds: 30
