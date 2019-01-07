@@ -48,6 +48,7 @@ rules:
   - releases
   verbs:
   - get
+  - create
   - list
   - watch
 - apiGroups:
