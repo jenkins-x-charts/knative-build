@@ -13,4 +13,11 @@ rules:
   - create
   - get
   - update
+- apiGroups:
+  - ""
+  resources:
+  - namespaces
+  verbs:
+  - create
+  - get
 {{- end }}
