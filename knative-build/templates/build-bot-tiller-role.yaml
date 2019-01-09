@@ -2,7 +2,7 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
-  name: knative-build-bot-{{ .Release.Namespace }}
+  name: {{ template "build.name" . }}-bot-{{ .Release.Namespace }}
   namespace: {{ .Values.tillerNamespace }}
 rules:
 - apiGroups:
