@@ -1,0 +1,6 @@
+apiVersion: caching.internal.knative.dev/v1alpha1
+kind: Image
+metadata:
+  name: git-init
+spec:
+  image: {{ .Values.image.git }}

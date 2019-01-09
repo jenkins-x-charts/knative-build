@@ -61,11 +61,25 @@ rules:
   resources:
   - builds
   - buildtemplates
+  - clusterbuildtemplates
   verbs:
   - get
   - list
   - create
   - update
   - delete
+  - patch
+  - watch
+- apiGroups:
+  - caching.internal.knative.dev
+  resources:
+  - images
+  verbs:
+  - get
+  - list
+  - create
+  - update
+  - delete
+  - deletecollection
   - patch
   - watch
