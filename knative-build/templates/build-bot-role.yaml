@@ -16,11 +16,6 @@ rules:
   - ""
   resources:
   - configmaps
-  verbs:
-  - get
-- apiGroups:
-  - ""
-  resources:
   - services
   verbs:
   - get
@@ -65,6 +60,14 @@ rules:
   verbs:
   - get
   - list
+- apiGroups:
+  - extensions
+  resources:
+  - ingresses
+  verbs:
+  - get
+  - list
+  - watch
 - apiGroups:
   - jenkins.io
   resources:
