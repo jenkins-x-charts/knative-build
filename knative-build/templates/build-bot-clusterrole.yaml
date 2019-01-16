@@ -20,4 +20,18 @@ rules:
   verbs:
   - create
   - get
+- apiGroups:
+  - extensions
+  resources:
+  - ingresses
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - ""
+  resources:
+  - services
+  verbs:
+  - get
 {{- end }}
