@@ -100,4 +100,11 @@ rules:
   - list
   - get
   - update
+- apiGroups:
+  - jenkins.io
+  resources:
+  - extensions
+  verbs:
+  - get
+  - list
 {{- end }}
