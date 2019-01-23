@@ -1,15 +1,15 @@
-{{- if .Values.build.auth.git.username }}
+{{- if .Values.tillerNamespace }}
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
-  name: knative-build-bot-{{ .Release.Namespace }}
+  name: knative-build-tiller-{{ .Values.tillerNamespace }}
   namespace: {{ .Values.tillerNamespace }}
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
-  name: knative-build-bot-{{ .Release.Namespace }}
+  name: knative-build-tiller-{{ .Values.tillerNamespace }}
 subjects:
 - kind: ServiceAccount
-  name: knative-build-bot
+  name: knative-build-tiller
   namespace: {{ .Release.Namespace }}
 {{- end }}
