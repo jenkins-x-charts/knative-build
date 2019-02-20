@@ -21,6 +21,18 @@ rules:
   - create
   - get
 - apiGroups:
+  - ""
+  resources:
+  - pods
+  verbs:
+  - get
+- apiGroups:
+  - ""
+  resources:
+  - pods/portforward
+  verbs:
+  - create  
+- apiGroups:
   - extensions
   resources:
   - ingresses
