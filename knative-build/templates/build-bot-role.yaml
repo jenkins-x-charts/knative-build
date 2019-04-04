@@ -103,6 +103,8 @@ rules:
   - list
   - get
   - update
+  - patch
+  - watch
 - apiGroups:
   - jenkins.io
   resources:
